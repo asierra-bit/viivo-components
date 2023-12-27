@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Geologica', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         'primary-1': {
           DEFAULT: '#A925C3',
@@ -19,7 +24,7 @@ export default {
           DEFAULT: '#7A03F9',
         },
         ebony: {
-          DEFAULT: '#0C0919',
+          DEFAULT: '#0D0919',
         },
         haiti: {
           DEFAULT: '#191139',

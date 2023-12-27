@@ -11,8 +11,18 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
+    "@astrojs/svelte": "^5.0.2",
     "@astrojs/tailwind": "^5.0.4",
+    "@fontsource/geologica": "^5.0.3",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/pro-regular-svg-icons": "^6.5.1",
+    "@fortawesome/pro-solid-svg-icons": "^6.2.1",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "@splidejs/svelte-splide": "^0.2.9",
     "astro": "^4.0.7",
+    "svelte": "^4.2.8",
+    "svelte-fa": "^3.0.4",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
   }

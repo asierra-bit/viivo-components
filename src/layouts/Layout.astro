@@ -1,0 +1,25 @@
+---
+
+const { title } = Astro.props;
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import '@splidejs/svelte-splide/css';
+import '@splidejs/svelte-splide/css/core';
+---
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{ title }</title>
+	</head>
+	<body>
+		<Header />
+        <slot />
+	</body>
+</html>

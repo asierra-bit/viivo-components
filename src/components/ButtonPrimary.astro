@@ -1,0 +1,64 @@
+---
+
+import { faArrowRight } from '@fortawesome/pro-regular-svg-icons';
+import Fa from 'svelte-fa';
+---
+
+<div class=" relative group bg-white circle flex">
+    <div class="size-[44px] absolute mx-1 my-1 bg-transparent rounded-full group-hover:bg-gradient-to-r group-hover:from-secondary-1 group-hover:to-secondary-2">
+        <Fa icon={faArrowRight} class="-rotate-45  text-secondary group-hover:text-white text-2xl left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  absolute size-[44px] group-hover:rotate-0 duration-300 transition-all"  />
+    </div>
+    <div class=" w-[180px] h-[52px] flex items-center pl-16  duration-300 transition-all text-white text-base font-normal font-['Geologica'] group-hover:text-black">
+        Cotizar ahora
+    </div>
+</div>
+
+
+<style>
+    .circle {
+      display: inline-block;
+      animation: bounce 0.5s forwards;
+    }
+    .circle:hover {
+          display: inline-block;
+        animation: bounce2 .5s forwards;
+      
+    }
+    
+    .bounce {
+      animation: bounce2 2s ease-in-out ;
+    }
+    @keyframes bounce {
+        from {
+            width: 180px;
+            border-radius: 4rem;
+            }
+        80%{
+            width: 40px;
+            border-radius: 60%;
+        }
+        to {
+            width: 50px;
+            border-radius: 50%;
+        }
+      
+    }
+    
+    .bounce2 {
+      animation: bounce2 .5s forwards ;
+    }
+    @keyframes bounce2 {
+    
+        from {
+            width: 50px;
+            border-radius: 4rem;
+            }
+        80%{
+            width: 190px;
+        }
+        to {
+                width: 180px;
+                border-radius: 4rem;
+        }
+    }
+    </style>

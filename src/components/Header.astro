@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import Logo from "../assets/images/logo.svg";
+import { faBars } from '@fortawesome/pro-regular-svg-icons';
+import MenuLink  from "./MenuLink.astro"
+import BtnPrimary from "./ButtonPrimary.astro"
+import Fa from 'svelte-fa';
+---
+
+<header
+  class="fixed top-0 left-0 w-full z-20 transition-all duration-200"
+  x-data="{
+    prevScrollPosition: 0,
+    direction: 'UP',
+    scrollPosition: document.body.getBoundingClientRect().top,
+  }"
+  :class="{
+    '-translate-y-full': direction === 'DOWN',
+    'translate-y-0': direction === 'UP',
+    'bg-white/40 backdrop-blur-sm': scrollPosition < -200
+  }"
+  x-on:scroll.window="
+    scrollPosition = document.body.getBoundingClientRect().top;
+
+    if(document.body.getBoundingClientRect().top > prevScrollPosition) {
+        direction = 'UP';
+    }
+    else {
+      direction = 'DOWN';
+    }
+    prevScrollPosition = document.body.getBoundingClientRect().top
+  "
+>
+  <div class="container px-6 mx-auto py-8">
+    <div class="flex items-center justify-between">
+      <div class="h-[50px] w-fit flex items-center">
+        <a href="/">
+          <Image src={Logo} alt="Sabbi" class="object-cover"
+            widths={[140]}
+            width={140}
+            height={32}
+          />
+        </a>
+      </div>
+      <div class="flex lg:hidden" x-on:click="menuModal = ! menuModal">
+        <Fa icon={faBars} class="text-secondary-500 text-2xl px-6" size="2x" />
+      </div>
+      <div class="items-center hidden lg:flex">
+        <nav class="hidden lg:flex">
+          <div class="w-full flex justify-center">
+            <div class="px-3 py-2  top-[46px]  bg-black bg-opacity-20 rounded-[100px] backdrop-blur-[100px] justify-center items-center gap-2 inline-flex">
+              <MenuLink> Portafolio </MenuLink>
+              <MenuLink> En Acción </MenuLink>
+              <MenuLink> ¿Porqué nosotros? </MenuLink>
+              <MenuLink> Clientes </MenuLink> 
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="flex w-[250px]">
+        <BtnPrimary />
+      </div>
+    </div>
+  </div>
+</header>

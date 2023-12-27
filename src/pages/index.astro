@@ -1,16 +1,47 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import VideoBackground from "../components/home/VideoBackground.astro";
+import ListLogos from "../components/home/ListLogos.svelte";
+import ListProjects from "../components/home/ListProjects.astro";
+import BtnPrimary from "../components/ButtonPrimary.astro"
+import '@fontsource/geologica';
+import '@fontsource/geologica/300.css';
+import '@fontsource/geologica/500.css';
+import '@fontsource/geologica/700.css';
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="VIIVO">
+	<div class="bg-ebony">
+		<div class="relative">
+			<VideoBackground />
+		</div>
+		
+		<div class="absolute w-full justify-center items-end flex h-screen">
+		</div>
+		<div class="relative flex justify-center items-end h-screen max-w-4xl mx-auto pb-12">
+			<div class="text-center text-white text-[104px] font-semibold font-['Geologica'] leading-[108px]">Le damos vida a tus ideas</div>
+		</div>
+		<div class="relative">
+			<ListLogos client:load />
+		</div>
+		<div class="container mx-auto relative">
+			<div class="w-[600px] h-[600px] left-2/3  absolute opacity-20 bg-gradient-to-r from-indigo-700 to-violet-700 rounded-full blur-[200px]"></div>
+			<div class="flex flex-wrap">
+				<div class="w-2/3">
+					<span class="text-white text-7xl font-semibold font-['Geologica']">¡Nos apasiona lo<br/></span>
+					<span class="text-7xl font-medium bg-gradient-to-r from-primary-1  to-primary-2 inline-block text-transparent bg-clip-text">que hacemos!</span>
+					<p class="text-white  text-lg">Descubre lo que podemos hacer por ti con nuestro portafolio.</p>
+				</div>
+				<div class="w-1/3 flex items-center justify-center">
+					<BtnPrimary />
+				</div>
+			</div>
+			<ListProjects />
+			
+		</div>
+	</div>
+
+	
+</Layout>
+

@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import Card from "./CardProject.astro";
+import project1 from "../../assets/images/projects/project1.png";
+import project2 from "../../assets/images/projects/project2.png";
+import project3 from "../../assets/images/projects/project3.png";
+import project4 from "../../assets/images/projects/project4.png";
+import { faArrowRight } from '@fortawesome/pro-regular-svg-icons';
+import Fa from 'svelte-fa';
+---
+
+<div class="flex flex-wrap py-16">
+    <div class="w-1/4 px-4">
+        <Card title="Eventos" image={project1} />
+    </div>
+    <div class="w-1/4 px-4">
+        <Card title="Producción Audiovisual" image={project2} />
+    </div>
+    <div class="w-1/4 px-4">
+        <Card title="Streaming" image={project3} />
+    </div>
+    <div class="w-1/4 px-4">
+        <Card title="Fotografía" image={project4} />
+    </div>
+</div>
+
