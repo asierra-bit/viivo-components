@@ -1,0 +1,16 @@
+---
+const { classes, gradient } = Astro.props;
+---
+
+<span
+  class:list={[
+    "bg-gradient-to-r inline-block text-transparent bg-clip-text",
+    classes,
+    {
+      "from-primary-1 to-primary-2": gradient === "primary",
+      "from-secondary-1 to-secondary-2": gradient === "secondary",
+    },
+  ]}
+>
+  <slot />
+</span>
