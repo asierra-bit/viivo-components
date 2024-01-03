@@ -8,17 +8,17 @@ import BtnPrimary from "../../components/ButtonPrimary.astro";
 
 ---
 <div class="relative">
-    <div class="w-[600px] h-[600px]   absolute opacity-20 bg-gradient-to-r from-indigo-700 to-violet-700 rounded-full blur-[200px]"></div>
+    <div class=" h-[600px]   absolute opacity-20 bg-gradient-to-r from-indigo-700 to-violet-700 rounded-full blur-[200px]"></div>
     <p class="text-white text-[64px] font-semibold font-['Geologica']">
         ¿Por qué 
         <Text gradient="primary">
             nos eligen?
         </Text>
     </p>
-    <p class="w-[931px] text-white text-lg font-normal font-['Geologica'] py-8">Somos una productora audiovisual que se especializa en la creación de contenidos orientados al deporte.</p>
+    <p class="w-full text-white text-lg font-normal font-['Geologica'] py-8">Somos una productora audiovisual que se especializa en la creación de contenidos orientados al deporte.</p>
     <BtnPrimary />
        
-    <div class="grid grid-cols-3 gap-6 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 py-12">
         <div class=" px-4 bg-black bg-opacity-25 rounded-[32px] border border-indigo-500 p-8">
             <div class="pb-6">
                 <Image src={form1} alt="Sabbi" class="object-cover" />
@@ -32,13 +32,13 @@ import BtnPrimary from "../../components/ButtonPrimary.astro";
             <div class="pb-6">
                 <Image src={form2} alt="Sabbi" class="object-cover" />
             </div>
-            <p class="w-[282.67px] h-[69px] text-white text-lg font-normal font-['Geologica']">Tenemos un equipo para obtener tomas únicas y espectaculares</p>
+            <p class=" text-white text-lg font-normal font-['Geologica']">Tenemos un equipo para obtener tomas únicas y espectaculares</p>
         </div>
         <div class=" px-4 bg-black bg-opacity-25 rounded-[32px] border border-indigo-500 p-8">
             <div class="pb-6">
                 <Image src={form3} alt="Sabbi" class="object-cover" />
             </div>
-            <p class="w-[282.67px] h-[69px] text-white text-lg font-normal font-['Geologica']">Usamos técnicas innovadoras y creativas para contar historias</p>
+            <p class=" text-white text-lg font-normal font-['Geologica']">Usamos técnicas innovadoras y creativas para contar historias</p>
         </div>
         
     </div>

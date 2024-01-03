@@ -10,6 +10,9 @@ import '@fontsource/geologica/500.css';
 import '@fontsource/geologica/700.css';
 import Choose from "../components/home/Choose.astro";
 import Us from "../components/home/Us.astro";
+import { faChevronDown } from '@fortawesome/pro-regular-svg-icons';
+
+import Fa from 'svelte-fa';
 
 ---
 
@@ -21,14 +24,19 @@ import Us from "../components/home/Us.astro";
 		
 		<div class="absolute w-full justify-center items-end flex h-screen">
 		</div>
-		<div class="relative flex justify-center items-end h-screen max-w-4xl mx-auto pb-12">
-			<div class="text-center text-white text-[104px] font-semibold font-['Geologica'] leading-[108px]">Le damos vida a tus ideas</div>
+		<div class="relative flex justify-center items-end h-screen max-w-4xl mx-auto pb-20">
+			<div class="text-center text-white text-[104px] font-semibold font-['Geologica'] leading-[108px] flex justify-center flex-wrap">
+				<p>
+					Le damos vida a tus ideas
+				</p>
+				<p class="text-center  w-full flex justify-center mt-20 animate-bounce">    <Fa icon={faChevronDown} class="!text-3xl px-6 text-white" /> </p>
+			</div> 
 		</div>
 		<div class="relative">
 			<ListLogos client:load />
 		</div>
 		<div class="container mx-auto relative">
-			<div class="w-[600px] h-[600px] left-2/3  absolute opacity-20 bg-gradient-to-r from-indigo-700 to-violet-700 rounded-full blur-[200px]"></div>
+			<div class="lg:w-[600px] h-[600px] left-2/3  absolute opacity-20 bg-gradient-to-r from-indigo-700 to-violet-700 rounded-full blur-[200px]"></div>
 			<div class="flex flex-wrap">
 				<div class="w-2/3">
 					<span class="text-white text-7xl font-semibold font-['Geologica']">¡Nos apasiona lo<br/></span>
@@ -48,4 +56,5 @@ import Us from "../components/home/Us.astro";
 
 	
 </Layout>
+
 

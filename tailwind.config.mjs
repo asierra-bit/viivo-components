@@ -6,6 +6,10 @@ export default {
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
   ],
   theme: {
+    container: {
+      padding: '2rem',
+      center: true,
+    },
     extend: {
       fontFamily: {
         sans: ['Geologica', ...defaultTheme.fontFamily.sans],

@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import Logo from "../assets/images/logo.svg";
+import { faFacebook, faLinkedin, faYoutube, faXTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import MenuLink  from "./MenuLink.astro"
+import BtnPrimary from "./ButtonPrimary.astro"
+import Fa from 'svelte-fa';
+---
+
+<footer class="bg-gray-950 h-[300px]">
+    <div class="flex flex-wrap container items-center h-full content-center">
+        <div class="w-1/2">
+            <a href="/">
+                <Image src={Logo} alt="Sabbi" class="object-cover"
+                  widths={[140]}
+                  width={140}
+                  height={32}
+                />
+              </a>
+          
+        </div>
+        <div class="w-1/2 flex justify-end">
+            <div class="text-white hover:text-[#CAC1FC] h-12 w-12 flex content-center justify-center items-center transition-all duration-200 hover:bg-haiti bg-gray-950 rounded-[100px]  ">
+                <Fa icon={faFacebook} class="text-2xl px-6" />
+            </div>
+            <div class="text-white hover:text-[#CAC1FC] h-12 w-12 flex content-center justify-center items-center transition-all duration-200 hover:bg-haiti bg-gray-950 rounded-[100px]  ">
+                <Fa icon={faLinkedin} class="text-2xl px-6" />
+            </div>
+            <div class="text-white hover:text-[#CAC1FC] h-12 w-12 flex content-center justify-center items-center transition-all duration-200 hover:bg-haiti bg-gray-950 rounded-[100px]  ">
+                <Fa icon={faYoutube} class="text-2xl px-6" />
+            </div> 
+            <div class="text-white hover:text-[#CAC1FC] h-12 w-12 flex content-center justify-center items-center transition-all duration-200 hover:bg-haiti bg-gray-950 rounded-[100px]  ">
+                <Fa icon={faXTwitter} class="text-2xl px-6" />
+            </div> 
+            <div class="text-white hover:text-[#CAC1FC] h-12 w-12 flex content-center justify-center items-center transition-all duration-200 hover:bg-haiti bg-gray-950 rounded-[100px]  ">
+                <Fa icon={faInstagram} class="text-2xl px-6" />
+            </div> 
+        </div>
+        <div class="w-1/2 mt-8">
+            <ul class="">
+               
+                <li class=" h-9 hover:bg-white hover:bg-opacity-25 rounded-[100px] justify-start items-start inline-flex">
+                    <div class="px-4 py-2 rounded-[100px] justify-center items-center gap-2.5 flex">
+                        <div class="text-center text-white text-base font-normal font-['Geologica']">Portafolio</div>
+                    </div>
+                </li>
+                <li class=" h-9 hover:bg-white hover:bg-opacity-25 rounded-[100px] justify-start items-start inline-flex">
+                    <div class="px-4 py-2 rounded-[100px] justify-center items-center gap-2.5 flex">
+                        <div class="text-center text-white text-base font-normal font-['Geologica']">En Acción</div>
+                    </div>
+                </li>
+                <li class=" h-9 hover:bg-white hover:bg-opacity-25 rounded-[100px] justify-start items-start inline-flex">
+                    <div class="px-4 py-2 rounded-[100px] justify-center items-center gap-2.5 flex">
+                        <div class="text-center text-white text-base font-normal font-['Geologica']">¿Porqué nosotros?</div>
+                    </div>
+                </li>
+                <li class=" h-9 hover:bg-white hover:bg-opacity-25 rounded-[100px] justify-start items-start inline-flex">
+                    <div class="px-4 py-2 rounded-[100px] justify-center items-center gap-2.5 flex">
+                        <div class="text-center text-white text-base font-normal font-['Geologica']">Clientes</div>
+                    </div>
+                </li>
+                <li class=" h-9 hover:bg-white hover:bg-opacity-25 rounded-[100px] justify-start items-start inline-flex">
+                    <div class="px-4 py-2 rounded-[100px] justify-center items-center gap-2.5 flex">
+                        <div class="text-center text-white text-base font-normal font-['Geologica']">Link</div>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+    </div>  
+</footer>
